@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css" />
+    <!-- <script src="https://vuejs.org/js/vue.min.js"></script> -->
+    <script src="https://vuejs.org/js/vue.js"></script>
+    <title>enigme0</title>
+</head>
+
+<body>
+    <div id="app" class="app-container">
+        <h2>{{ title }}</h2>
+        <div class="enigme-container">
+
+            <div v-if="!answer && step === 'questionImage'">
+                <p> {{ question.questionImage }} </p>
+                <div class="img-enigme-container">
+                    <img :src="image"/>
+                    <div v-for="(zone, zoneName) in zones" class="click-zone" :style="{
+                        height: zone.height,
+                        width: zone.width,
+                        top: zone.top,
+                        left: zone.left,
+                        border: zone.border,
+                    }"
+                    v-on:click="resolve(zoneName)"></div>
+                </div>
+            </div>
+
+            <div v-if="!answer && step === 'questionText'">
+                <p> {{ question.questionText }} </p>
+                <div class="grid-2-column">
+                    <div v-for="proposition in question.propositions"v-on:click="resolve(proposition)" class="button-text">{{ proposition }}
+                    </div>
+                </div>
+            </div>
+
+            <div v-if="answer">
+                <p>{{ answerMessage }}</p>
+                <div class="pointer" v-on:click="nextStep()">
+                    {{ nextTxt }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="data.js"></script>
+<script type="text/javascript" src="index.js"></script>
+
+</html>
