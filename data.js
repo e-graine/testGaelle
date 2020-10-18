@@ -49,7 +49,7 @@ data = {
     questions:
     [
         {
-            questionImage : "Retrouve un objet qui te permet d’économiser",
+            questionImage : "Retrouve un objet qui te permet d’économiser test",
             answerImage : "listeCourse",
             questionText :"Quelle quantité de plats non déballés est jetée par an pour une personne ?",
             propositions : ["7Kg", "2Kg", "10Kg", "5Kg"],
