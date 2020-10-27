@@ -1,4 +1,4 @@
-edata = {
+data = {
     title: "Food truck anti-gaspi",
     image: "img/image.jpg",
     zones : {
