@@ -5,6 +5,14 @@ data = {
         bananes : {
             top : "18%",
             left : "35%",
+            width : "40%",
+            height : "16%",
+            border : "1px solid black",
+            wrongText : "Ce n'est pas la bonne réponse, essaye encore.",
+        },
+        tomate : {
+            top : "40%",
+            left : "70%",
             width : "30%",
             height : "11%",
             border : "1px solid black",
