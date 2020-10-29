@@ -12,7 +12,7 @@ data = {
         },
         tomate : {
             top : "55%",
-            left : "66%",
+            left : "56%",
             width : "34%",
             height : "15%",
             border : "1px solid black",
